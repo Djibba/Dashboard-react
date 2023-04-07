@@ -2,7 +2,7 @@ import React from "react";
 import {Bar} from "react-chartjs-2";
 import fulldata from "../../context/fulldata";
 
-function BarChart(){
+function BarChart(props){
     return(
         <div className='chart-container'>
             <Bar
@@ -11,8 +11,8 @@ function BarChart(){
                     labels: ["Jan/Feb", "Mar/Avr", "Mai/Juin", "Juil/Aout", "Sept/Oct", "Nov/Dec"],
                     datasets: [
                         {
-                            label: 'Chiffres bisemestriels',
-                            data: fulldata['2020'].chart1,
+                            label: props.name,
+                            data: props.data,
                             backgroundColor: [
                                 "rgba(255, 99, 132, 0.8)",
                                 "rgba(54, 162, 235, 0.8)",
