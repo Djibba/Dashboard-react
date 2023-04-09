@@ -7,9 +7,6 @@ import {DashboardContext} from "../../context/DashboardContext";
 function DashboardFinances () {
 
     const {changeYear, dataChart, yearData} = useContext(DashboardContext)
-
-    console.log(dataChart, changeYear, yearData)
-
     return (
         <div className="global-container">
             <h1>Les résultats de l'année : {yearData}</h1>
