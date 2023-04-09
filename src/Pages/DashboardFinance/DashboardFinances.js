@@ -1,6 +1,7 @@
 import React, {useState, useContext} from "react";
 import './DashboardFinance.css'
 import BarChart from "../../Components/AllChart/BarChart";
+import LineChart from "../../Components/AllChart/LineChart"
 import {DashboardContext} from "../../context/DashboardContext";
 
 function DashboardFinances () {
@@ -25,6 +26,9 @@ function DashboardFinances () {
 
             <div className="dashboard-container">
                 <BarChart data={dataChart.chart1} name={'Chiffres bimestriles'}  />
+                <LineChart data={dataChart.chart2} name={'Nombres d\'abones'} />
+                <LineChart data={dataChart.chart3} name={'Nombres de clients'} />
+                <BarChart data={dataChart.chart4} name={'Budget Marketing'}  />
             </div>
         </div>
     )
